@@ -3377,8 +3377,12 @@ class PlayState extends MusicBeatState
 				{
 					coolText.destroy();
 					co.destroy();
-	
-					rating.destroy();
+					if (currentTimingShown != null && timeShown >= 25)
+						{
+							remove(currentTimingShown);
+							currentTimingShown = null;
+						}
+						rating.destroy();
 				},
 				startDelay: Conductor.crochet * 0.002
 			});
