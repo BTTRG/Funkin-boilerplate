@@ -3241,7 +3241,7 @@ class PlayState extends MusicBeatState
 			add(comboSpr);
 
 			currentTimingShown.screenCenter();
-			currentTimingShown.x = comboSpr.x + 100;
+			currentTimingShown.x = comboSpr.x + 100000;
 			currentTimingShown.y = rating.y + 100;
 			currentTimingShown.acceleration.y = 600;
 			currentTimingShown.velocity.y -= 150;
@@ -3380,7 +3380,7 @@ class PlayState extends MusicBeatState
 	
 					rating.destroy();
 				},
-				startDelay: Conductor.crochet * 0.001
+				startDelay: Conductor.crochet * 0.002
 			});
 			curSection += 1;
 		}
