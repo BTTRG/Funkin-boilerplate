@@ -25,7 +25,7 @@ class KadeEngineData
 			FlxG.save.data.dfjk = false;
 			
 		if (FlxG.save.data.accuracyDisplay == null)
-			FlxG.save.data.accuracyDisplay = false;
+			FlxG.save.data.accuracyDisplay = true;
 
 		if (FlxG.save.data.offset == null)
 			FlxG.save.data.offset = 0;
@@ -50,13 +50,13 @@ class KadeEngineData
 			FlxG.save.data.fpsCap = 120;
 
 		if (FlxG.save.data.fpsCap > 285 || FlxG.save.data.fpsCap < 60)
-			FlxG.save.data.fpsCap = 120; // baby proof so you can't hard lock ur copy of Boiler Engine
+			FlxG.save.data.fpsCap = 120; // baby proof so you can't hard lock ur copy of Boiler Engine xd xd
 		
 		if (FlxG.save.data.scrollSpeed == null)
 			FlxG.save.data.scrollSpeed = 1;
 
 		if (FlxG.save.data.npsDisplay == null)
-			FlxG.save.data.npsDisplay = false;
+			FlxG.save.data.npsDisplay = true;
 
 		if (FlxG.save.data.frames == null)
 			FlxG.save.data.frames = 10;
@@ -80,7 +80,7 @@ class KadeEngineData
 			FlxG.save.data.flashing = true;
 
 		if (FlxG.save.data.resetButton == null)
-			FlxG.save.data.resetButton = false;
+			FlxG.save.data.resetButton = true;
 		
 		if (FlxG.save.data.botplay == null)
 			FlxG.save.data.botplay = false;
