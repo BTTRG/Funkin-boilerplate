@@ -3229,6 +3229,17 @@ class PlayState extends MusicBeatState
 			comboSpr.acceleration.y = 600;
 			comboSpr.velocity.y -= 150;
 
+			var co:FlxSprite = new FlxSprite().loadGraphic(Paths.image('combo'));
+			co.screenCenter();
+			co.x = coolText.x;
+			co.acceleration.y = 600;
+			co.antialiasing = true;
+			co.velocity.y -= 150;
+			co.setGraphicSize(Std.int(comboSpr.width * 0.7));
+			co.updateHitbox();
+			co.velocity.x += FlxG.random.int(1, 10);
+			add(comboSpr);
+
 			currentTimingShown.screenCenter();
 			currentTimingShown.x = comboSpr.x + 100;
 			currentTimingShown.y = rating.y + 100;
@@ -3361,6 +3372,16 @@ class PlayState extends MusicBeatState
 				startDelay: Conductor.crochet * 0.001
 			});
 
+			FlxTween.tween(co, {alpha: 0}, 0.2, {
+				onComplete: function(tween:FlxTween)
+				{
+					coolText.destroy();
+					co.destroy();
+	
+					rating.destroy();
+				},
+				startDelay: Conductor.crochet * 0.001
+			});
 			curSection += 1;
 		}
 	}
